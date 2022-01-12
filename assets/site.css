@@ -1,0 +1,721 @@
+﻿:root {
+  --main-color: #293f7f;
+  --secondary-color: #3b5ab2;
+}
+
+html {
+  font-size: 22px;
+}
+
+html, body {
+  color: #434242;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+body {
+  background: #F3EFE0;
+  line-height: 1.64;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b {
+  margin-bottom: 20px;
+}
+
+h1, h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  font-weight: 300;
+  color: var(--main-color);
+}
+
+h2 {
+  font-size: 54px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.lead {
+  text-align: center;
+  color: #727878;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+}
+
+hr {
+  margin: 40px 0px;
+  border-color: #727878;
+  opacity: 0.2;
+}
+
+.project-referal {
+  margin-top: 40px;
+}
+
+.project-referal p {
+  font-style: italic;
+  color: #999999;
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.icon {
+  display: inline-block;
+  background: url(images/sm_icon_sprite.png) no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+.icon.icon-twitter {
+  background-position: 0px 0px;
+}
+
+.icon.icon-linkedin {
+  background-position: 0px -32px;
+}
+
+.icon.icon-skype {
+  background-position: 0px -64px;
+}
+
+.icon.icon-email {
+  background-position: 0px -96px;
+}
+
+.jumbotron {
+  background: no-repeat center center fixed url(./coding.gif);
+  background-size: cover;
+  background-color: #fff;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 100vh;
+  filter: hue-rotate(40deg);
+}
+
+.jumbotron .overlay {
+  background-color: #22222275;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron .container {
+  text-align: center;
+}
+
+.jumbotron .container > * {
+  color: #fff;
+}
+
+.jumbotron .container h1 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff35;
+  display: inline-block;
+}
+
+.jumbotron .container .lead {
+  font-size: 28px;
+}
+
+.jumbotron .scroll-down {
+  height: 5rem;
+  width: 8rem;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 2rem;
+  background-color: #222222;
+  text-align: center;
+}
+
+.jumbotron .scroll-down i[class^=fa] {
+  color: #fff;
+  font-size: 2rem;
+  padding-top: 1.5rem;
+  animation-name: wiggle;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.jumbotron .scroll-down:hover i[class^=fa] {
+  padding-top: 25px;
+}
+
+.navbar {
+  border: 0px;
+  background-color: #222222;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  width: 8rem;
+  z-index: 6;
+  padding: 0;
+  margin-top: 0;
+  transition: margin-top ease 500ms;
+}
+
+.navbar .navbar-collapse {
+  padding: 0px;
+  max-height: none;
+}
+
+.navbar .navbar-nav {
+  float: none;
+  margin: 0px;
+}
+
+.navbar .nav > li {
+  display: block;
+  float: none;
+}
+
+.navbar .nav > li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color ease 500ms;
+}
+
+.navbar .nav > li a:hover, .navbar .nav > li a:focus {
+  color: #999999;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+  display: none;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  width: 100%;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background: #222222;
+}
+
+.fixed .navbar {
+  top: 0;
+  position: fixed;
+  margin-top: 5rem;
+}
+
+.background-white {
+  background: #fff;
+}
+
+.background-gray {
+  background: #434242;
+}
+
+.container {
+  padding: 40px 0;
+}
+
+.copycat {
+  position: absolute;
+  width: 20rem;
+  left: -20rem;
+  top: 5rem;
+  z-index: 7;
+  transition: left ease .3s;
+}
+
+.copycat:hover {
+  left: 0;
+}
+
+.copycat .tab {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 5px;
+  background-color: #222;
+  border-radius: 0 50% 50% 0;
+}
+
+.copycat > a {
+  color: white;
+  display: block;
+  background: #222;
+  padding: 0 5% 5% 5%;
+  font-size: .8rem;
+}
+
+.copycat > img {
+  height: auto;
+  width: 100%;
+  padding: 5%;
+  background-color: #222;
+}
+
+.copycat .tab img {
+  height: 3rem;
+  width: 3rem;
+}
+
+#profile .row > div {
+  margin-bottom: 20px;
+}
+
+#profile .profile-picture {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+  transition: border-radius ease .3s;
+}
+
+#profile .profile-picture:hover {
+  border-radius: 0;
+}
+
+#profile .profile-picture img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  transform-origin: 100% 0;
+  transition: transform ease .3s;
+}
+
+#profile .profile-picture:hover img {
+  transform: scale(1);
+}
+
+#experiences .experience {
+  margin-bottom: 20px;
+}
+
+#experiences .experience p > strong {
+  display: block;
+  padding-top: 8px;
+  margin-bottom: 10px;
+}
+
+#experiences .experience .experience-details {
+  display: block;
+  margin-top: 6px;
+}
+
+#experiences .experience .experience-details * {
+  color: var(--main-color);
+}
+
+#experiences .experience .experience-details .seperator {
+  color: #BCBCBC;
+}
+
+#abilities ul > li {
+  transition: padding .3s ease, background .3s ease, height .3s ease;
+  overflow: hidden;
+  height: 1.8rem;
+}
+
+#abilities ul > li.hidden {
+  height: 0;
+}
+
+#abilities ul > li:hover {
+  background: #F2F2F2;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#abilities ul > li .ability-title {
+  display: inline-block;
+  width: 60%;
+}
+
+#abilities ul > li .ability-score {
+  float: right;
+}
+
+#abilities ul > li .ability-score i[class^=fa] {
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+#interests .left {
+  float: left;
+}
+
+#interests .right {
+  float: right;
+}
+
+#interests img {
+  width: 80%;
+  height: auto;
+}
+
+#interests .right img {
+  float: right;
+}
+
+#interests .interest-content {
+  padding: 40px 0px;
+}
+
+#interests .row:hover .left img {
+  transform: rotate(-12deg);
+}
+
+#interests .row:hover .right img {
+  transform: rotate(12deg);
+}
+
+#projects .row > div {
+  margin-bottom: 30px;
+}
+
+#projects figure {
+  position: relative;
+  overflow: hidden;
+}
+
+#projects figure h3 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#projects figure .description a {
+  color: #fff;
+  font-weight: bold;
+}
+
+#projects figure img {
+  height: 100%;
+  width: 100%;
+}
+
+#projects figure figcaption {
+  padding: 20px 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+#projects figure .icon {
+  background: var(--main-color);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#contact {
+  padding-bottom: 200px;
+}
+
+#contact h2, #contact .row * {
+  color: #fff;
+  text-decoration: none;
+}
+
+#contact a {
+  display: inline-block;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+#contact a .icon {
+  float: left;
+  margin-right: 20px;
+}
+
+#contact a:hover {
+  opacity: 1;
+}
+
+.link {
+  color: var(--main-color);
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tag {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.tag input {
+  display: none;
+}
+
+.tag input + span {
+  border-radius: 25px;
+  border: 2px solid var(--main-color);
+  color: var(--secondary-color);
+  padding: .3rem .5rem;
+  display: inline-block;
+}
+
+.tag input:checked + span {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+@media (max-width: 2500px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  ul.no-bullets {
+    columns: 2;
+  }
+}
+
+@media (max-width: 1200px) {
+  #interests .interest-content {
+    padding: 20px 0px;
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1680px) {
+  .container {
+    /* to prevent navbar (12rem) from overlaying the content */
+    max-width: calc(100vw - 24rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron:before {
+    bottom: 100px;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+  }
+
+  .jumbotron .container {
+    top: 20%;
+    padding-top: 0px;
+  }
+
+  .jumbotron .scroll-down {
+    width: 100%;
+    right: 0px;
+  }
+
+  .navbar {
+    left: 0px;
+    width: 100%;
+  }
+
+  .fixed .navbar {
+    margin-top: 0px;
+  }
+
+  .container {
+    padding: 60px 20px;
+    min-width: 280px;
+  }
+
+  .hidden-phone {
+    display: none;
+  }
+
+  #profile .row * {
+    text-align: center;
+  }
+
+  #experiences .experience .experience-details > span {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  #experiences .experience .experience-details .seperator {
+    display: none;
+  }
+
+  #interests .left {
+    float: none;
+  }
+
+  #interests .right {
+    float: none;
+  }
+
+  #interests > * {
+    text-align: center;
+  }
+
+  #interests img {
+    width: 50%;
+    height: auto;
+    float: none !important;
+  }
+
+  #interests .interest-content {
+    padding: 20px 0px;
+  }
+
+  #contact {
+    padding-bottom: 60px;
+  }
+
+  #contact a .icon {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .navbar-default .navbar-toggle {
+    display: block;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+  .jumbotron {
+    background-size: auto 150%;
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+
+  .jumbotron {
+    background-size: 150% auto;
+    background-attachment: scroll;
+  }
+
+  .jumbotron .lead {
+    display: none;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    padding-top: 1.5rem;
+  }
+
+  50% {
+    padding-top: 2rem;
+  }
+
+  100% {
+    padding-top: 1.5rem;
+  }
+}
+
+figure.effect {
+  background: var(--main-color);
+  color: #fff;
+}
+
+figure.effect img {
+  width: calc(100% + 20px);
+  transition: opacity 0.35s, transform 0.35s;
+  backface-visibility: hidden;
+}
+
+figure.effect:hover img {
+  opacity: 0.2;
+  transform: scale(1.2);
+}
+
+figure.effect figcaption {
+  text-align: left;
+}
+
+figure.effect h3 {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect:hover h3 {
+  opacity: 1;
+}
+
+figure.effect h3::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  transition: transform 0.35s;
+  transform: translate3d(-100%,0,0);
+}
+
+figure.effect:hover h3::after {
+  transform: translate3d(0,0,0);
+}
+
+figure.effect .description {
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(100%,0,0);
+  overflow: auto;
+  max-height: 80%;
+}
+
+figure.effect:hover .description {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
