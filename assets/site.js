@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+  fixHeaderSizeMobile();
   applyNavigation();
   applyResize();
   enableTooltipEverywhere();
@@ -9,6 +10,10 @@
 function applyNavigation() {
   applyClickEvent();
   applyStickyNavigation();
+}
+
+function fixHeaderSizeMobile() {
+  $('.jumbotron').css({ height: $(window).height() + 'px' });
 }
 
 function applyClickEvent() {
@@ -81,6 +86,7 @@ function applyResize() {
   const $window = $(window);
   $window.off('resize.resume');
   $window.on('resize.resume', function () {
+    fixHeaderSizeMobile();
     stickyNavigation();
     setActiveTopic();
   });
